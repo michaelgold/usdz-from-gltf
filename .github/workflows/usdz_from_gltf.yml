@@ -37,15 +37,17 @@ jobs:
       # - name: Setup upterm session
       #   uses: lhotari/action-upterm@v1
 
-      - name: Convert file
+      - name: Convert files 
         run: | 
           cd usdzconvert
           python convert_assets.py
 
-      # - name: Commit changes
-      #   uses: EndBug/add-and-commit@v8
-      #   with:
-      #     author_name: Your Name
-      #     author_email: mail@example.com
-      #     message: 'Your commit message'
-      #     add: '*.js'
+      - name: Commit changes to source
+        uses: EndBug/add-and-commit@v8
+        with:
+          add: 'source'
+
+      - name: Commit changes to dist
+        uses: EndBug/add-and-commit@v8
+        with:
+          add: 'dist'
