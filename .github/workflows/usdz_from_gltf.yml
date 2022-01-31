@@ -37,6 +37,8 @@ jobs:
 
       - name: Extract USDZ binaries
         run: tar -xvf usdzconvert/pxr_usd.tar.gz --directory ./usdzconvert
+      
+      - name: List Directory contents
         run: ls -lah usdzconvert
 
       # - name: Commit changes
