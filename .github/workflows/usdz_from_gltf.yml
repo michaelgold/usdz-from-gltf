@@ -35,7 +35,7 @@ jobs:
           ls -lah .
 
       - name: Convert file
-        run: python usdzconvert/run_usd.py usdzcconvert/usdzconvert/usdzconvert
+        run: python usdzconvert/run_usd.py usdzconvert/usdzconvert/usdzconvert
 
       # - name: Commit changes
       #   uses: EndBug/add-and-commit@v8
