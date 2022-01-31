@@ -33,11 +33,14 @@ jobs:
           wget https://github.com/michaelgold/usdzconvert/releases/download/1.6/pxr_usd.tar.gz
           tar -xvf pxr_usd.tar.gz --directory .
           ls -lah .
+      
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
 
-      - name: Convert file
-        run: | 
-          cd usdzconvert
-          python run_usd.py usdzconvert/usdzconvert
+      # - name: Convert file
+      #   run: | 
+      #     cd usdzconvert
+      #     python run_usd.py usdzconvert/usdzconvert
 
       # - name: Commit changes
       #   uses: EndBug/add-and-commit@v8
