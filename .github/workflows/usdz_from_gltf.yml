@@ -34,6 +34,7 @@ jobs:
           version: "tags/1.5"
           file: "pxr_usdz.tar.gz"
           target: "usdzconvert/pxr_usdz.tar.gz"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract USDZ binaries
         run: tar -xvf usdzconvert/pxr_usd.tar.gz --directory ./usdzconvert
