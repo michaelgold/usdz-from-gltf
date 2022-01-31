@@ -14,8 +14,12 @@ jobs:
         with:
           python-version: "2.x" # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
-      - run: python -m pip install --user numpy
-      - run: python -m pip install --user Pillow
+
+      - name: Install numpy
+        run: python -m pip install --user numpy
+      
+      - name: Install Pillow
+        run: python -m pip install --user Pillow
 
       - name: Checkout usdzconvert repo
         uses: actions/checkout@v2
@@ -30,8 +34,10 @@ jobs:
           version: "tags/1.5"
           file: "pxr_usdz.tar.gz"
           target: "usdzconvert/pxr_usdz.tar.gz"
-      - run: tar -xvf usdzconvert/pxr_usd.tar.gz --directory ./usdzconvert
-      - run: ls -lah usdzconvert
+
+      - name: Extract USDZ binaries
+        run: tar -xvf usdzconvert/pxr_usd.tar.gz --directory ./usdzconvert
+        run: ls -lah usdzconvert
 
       # - name: Commit changes
       #   uses: EndBug/add-and-commit@v8
