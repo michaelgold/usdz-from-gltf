@@ -31,7 +31,7 @@ jobs:
         run: |
           cd usdzconvert
           wget https://github.com/michaelgold/usdzconvert/releases/download/1.6/pxr_usd.tar.gz
-          tar -xvf usdzconvert/pxr_usd.tar.gz --directory .
+          tar -xvf pxr_usd.tar.gz --directory .
           ls -lah .
 
       # - name: Commit changes
