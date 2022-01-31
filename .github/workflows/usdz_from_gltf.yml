@@ -40,7 +40,7 @@ jobs:
       - name: Convert file
         run: | 
           cd usdzconvert
-          python run_usd.py usdzconvert/usdzconvert
+          python convert_assets.py
 
       # - name: Commit changes
       #   uses: EndBug/add-and-commit@v8
