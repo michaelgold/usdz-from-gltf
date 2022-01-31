@@ -2,7 +2,7 @@ name: Generate USDZ from GLTF
 on: push
 
 jobs:
-  run:
+  build:
     name: Generate the USDZ Files
     runs-on: ubuntu-latest
     steps:
