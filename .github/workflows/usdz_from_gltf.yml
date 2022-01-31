@@ -31,9 +31,9 @@ jobs:
         uses: dsaltares/fetch-gh-release-asset@master
         with:
           repo: "michaelgold/usdzconvert"
-          version: "tags/1.5"
+          version: "tags/1.6"
           file: "pxr_usdz.tar.gz"
-          target: "pxr_usdz.tar.gz"
+          target: "usdzconver/pxr_usdz.tar.gz"
 
       - name: Extract USDZ binaries
         run: tar -xvf usdzconvert/pxr_usd.tar.gz --directory ./usdzconvert
