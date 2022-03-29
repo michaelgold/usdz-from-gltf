@@ -1,6 +1,6 @@
 # usdz-from-gltf
 
-Throught the power of Github Actions you can convert a GLB file to USDZ file simply by uploading a file through Github's web UI. 
+Through the power of Github Actions you can convert a GLB file to USDZ file simply by uploading a file through Github's web UI. 
 
 ## Directions
 1. Click the big green "Use as template" button to make a new repo based on this template
